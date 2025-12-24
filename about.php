@@ -25,6 +25,13 @@ require_once 'includes/header.php';
                     dedicated to solving real-world problems through code. I thrive in collaborative environments 
                     and am always eager to learn new technologies to stay ahead of the curve.
                 </p>
+
+                <div style="margin-top: 2rem;">
+                    <a href="resume.php" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <span class="material-icons-round">download</span> Download Resume
+                    </a>
+                </div>
+
                 <div class="signature">
                     <p>— Omkarnath Dubey</p>
                 </div>
