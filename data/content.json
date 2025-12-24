@@ -106,23 +106,57 @@
                 "github_link": "#"
             },
             {
-                "title": "Spark Women (Android App)",
-                "description": "Final-year academic project focused on women safety. Contributed to UI implementation and application logic using Java.",
+                "title": "Spark Women (Android Sim)",
+                "description": "Interactive simulation of an Android safety app. Features SOS alerts, location tracking, and emergency contact management.",
                 "tech_stack": [
                     "Java",
-                    "Android XML"
+                    "Android XML",
+                    "HTML5 Simulation"
                 ],
-                "demo_link": "#",
+                "demo_link": "projects/spark-women/index.html",
                 "github_link": "#"
             },
             {
                 "title": "Spark Master",
-                "description": "Static website for women empowerment. Designed and developed using HTML and CSS.",
+                "description": "Static website platform focused on women empowerment content and community resources.",
                 "tech_stack": [
                     "HTML",
                     "CSS"
                 ],
-                "demo_link": "#",
+                "demo_link": "projects/spark-master/index.html",
+                "github_link": "#"
+            },
+            {
+                "title": "Enterprise Dashboard UI",
+                "description": "A comprehensive analytics dashboard for large-scale data visualization, featuring real-time updates and customizable widgets.",
+                "tech_stack": [
+                    "React",
+                    "D3.js",
+                    "Material UI"
+                ],
+                "demo_link": "projects/dashboard/index.html",
+                "github_link": "#"
+            },
+            {
+                "title": "E-Commerce Platform",
+                "description": "A headless e-commerce frontend built for performance and SEO, integrating with Shopify API.",
+                "tech_stack": [
+                    "Next.js",
+                    "Tailwind CSS",
+                    "Stripe API"
+                ],
+                "demo_link": "projects/ecommerce/index.html",
+                "github_link": "#"
+            },
+            {
+                "title": "Corporate Banking Portal",
+                "description": "Secure and accessible banking interface designed for high-net-worth individual management.",
+                "tech_stack": [
+                    "Vue.js",
+                    "SCSS",
+                    "Jest"
+                ],
+                "demo_link": "projects/banking/index.html",
                 "github_link": "#"
             }
         ]
