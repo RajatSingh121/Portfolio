@@ -50,6 +50,13 @@
                     "Figma",
                     "Webpack/Vite"
                 ]
+            },
+            {
+                "name": "Integrations & APIs",
+                "items": [
+                    "API Integration",
+                    "Payment Gateways (Seamless & Standard)"
+                ]
             }
         ]
     },
