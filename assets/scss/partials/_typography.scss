@@ -1,0 +1,72 @@
+// _typography.scss
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-heading;
+    color: $color-text;
+    line-height: 1.25;
+    margin-bottom: $spacing-sm;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: $spacing-sm;
+    color: $color-text-muted;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: $color-primary;
+        margin: $spacing-xs auto 0;
+        border-radius: 2px;
+    }
+}
+
+.section-subtitle {
+    text-align: center;
+    color: $color-text-muted;
+    max-width: 600px;
+    margin: - $spacing-md auto $spacing-lg;
+}
+
+@media (min-width: $bp-tablet) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}

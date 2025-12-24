@@ -1,0 +1,91 @@
+{
+    "meta": {
+        "title": "Omkarnath Dubey | Frontend Developer",
+        "description": "Portfolio of Omkarnath Dubey, a Frontend Developer specializing in performance, UI/UX, and scalability.",
+        "keywords": "Frontend Developer, React, Next.js, Corporate Portfolio"
+    },
+    "hero": {
+        "name": "Omkarnath Dubey",
+        "role": "Frontend Developer",
+        "tagline": "Building scalable, high-performance, and elegant web solutions for the enterprise.",
+        "cta_primary": { "text": "View Projects", "link": "#projects" },
+        "cta_secondary": { "text": "Contact Me", "link": "#contact" }
+    },
+    "about": {
+        "title": "About Me",
+        "content": "I am a results-driven Frontend Developer with a passion for crafting pixel-perfect, accessible, and performant web applications. With a strong foundation in modern JavaScript frameworks and a keen eye for design, I transform complex requirements into seamless digital experiences. My approach blends technical expertise with a business-focused mindset to deliver software that scales."
+    },
+    "skills": {
+        "title": "Technical Expertise",
+        "categories": [
+            {
+                "name": "Core Technologies",
+                "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript"]
+            },
+            {
+                "name": "Frameworks & Libraries",
+                "items": ["React", "Next.js", "Tailwind CSS", "Bootstrap"]
+            },
+            {
+                "name": "Tools & Workflow",
+                "items": ["Git & GitHub", "VS Code", "Figma", "Webpack/Vite"]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "items": [
+            {
+                "title": "Enterprise Dashboard UI",
+                "description": "A comprehensive analytics dashboard for large-scale data visualization, featuring real-time updates and customizable widgets.",
+                "tech_stack": ["React", "D3.js", "Material UI"],
+                "demo_link": "#",
+                "github_link": "#"
+            },
+            {
+                "title": "E-Commerce Platform",
+                "description": "A headless e-commerce frontend built for performance and SEO, integrating with Shopify API.",
+                "tech_stack": ["Next.js", "Tailwind CSS", "Stripe API"],
+                "demo_link": "#",
+                "github_link": "#"
+            },
+            {
+                "title": "Corporate Banking Portal",
+                "description": "Secure and accessible banking interface designed for high-net-worth individual management.",
+                "tech_stack": ["Vue.js", "SCSS", "Jest"],
+                "demo_link": "#",
+                "github_link": "#"
+            }
+        ]
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "items": [
+            {
+                "role": "Senior Frontend Developer",
+                "company": "TechCorp Solutions",
+                "duration": "2023 - Present",
+                "details": [
+                    "Led the migration of legacy monolith frontend to a modern micro-frontend architecture.",
+                    "Improved site performance scores by 40% through code splitting and asset optimization."
+                ]
+            },
+            {
+                "role": "Frontend Engineer",
+                "company": "Innovate Digital",
+                "duration": "2021 - 2023",
+                "details": [
+                    "Collaborated with UX designers to implement a new design system used across 5+ products.",
+                    "Mentored junior developers and established code quality standards."
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "subtitle": "Available for freelance opportunities and full-time roles.",
+        "email": "omkarnath@example.com",
+        "linkedin": "linkedin.com/in/omkarnath",
+        "github": "github.com/omkarnath"
+    }
+}

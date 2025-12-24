@@ -1,0 +1,29 @@
+// _layout.scss
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-sm;
+}
+
+.section {
+    padding: $spacing-xl 0;
+}
+
+.header {
+    padding: $spacing-md 0;
+}
+
+// Grids
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-md;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+}

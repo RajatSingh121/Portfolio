@@ -1,0 +1,28 @@
+// _variables.scss
+
+// Colors - Corporate & Premium
+$color-bg: #0f1115;       // Very dark charcoal
+$color-bg-alt: #161b22;   // Slightly lighter for cards/sections
+$color-text: #e6edf3;     // Off-white for body text
+$color-text-muted: #8b949e;
+$color-primary: #58a6ff;  // Bright blue for actions
+$color-secondary: #238636;// Success/Secondary
+$color-accent: #7ee787;   // Green accent
+$color-border: #30363d;   // Subtle borders
+
+// Typography
+$font-primary: 'Inter', sans-serif;
+$font-heading: 'Outfit', sans-serif;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 8rem;
+
+// Breakpoints
+$bp-mobile: 576px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-large: 1200px;
