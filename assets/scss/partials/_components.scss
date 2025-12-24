@@ -16,7 +16,7 @@
         color: #fff;
 
         &:hover {
-            background-color: darken($color-primary, 10%);
+            background-color: var(--primary-hover);
             transform: translateY(-2px);
         }
     }
@@ -92,16 +92,120 @@
     }
 }
 
+.nav-control {
+    display: flex;
+    align-items: center;
+}
+
+.icon-btn {
+    background: none;
+    border: 1px solid $color-border;
+    color: $color-text;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background: rgba($color-primary, 0.1);
+        border-color: $color-primary;
+    }
+
+    // Hide one icon based on theme
+    .icon-sun {
+        display: none;
+    }
+
+    .icon-moon {
+        display: block;
+    }
+}
+
+// Logic for switching icons
+[data-theme="light"] .icon-btn {
+    .icon-sun {
+        display: block;
+    }
+
+    .icon-moon {
+        display: none;
+    }
+}
+
+.lang-dropdown {
+    background-color: var(--bg-card);
+    color: $color-text;
+    border: 1px solid $color-border;
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+        border-color: $color-primary;
+    }
+}
+
 // Hero Section
 .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 80px; // Nav height
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-lg;
+
+    @media (max-width: $bp-tablet) {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: $spacing-md;
+    }
 }
 
 .hero-content {
-    max-width: 800px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-image {
+    flex: 0 0 350px;
+    max-width: 350px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba($color-primary, 0.3);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+            border-color: $color-primary;
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        flex: 0 0 200px;
+        max-width: 200px;
+
+        img {
+            border-radius: 50%; // Circle on mobile looks nice
+        }
+    }
 }
 
 .greeting {
@@ -117,11 +221,20 @@
     color: $color-text-muted;
     max-width: 600px;
     margin-bottom: $spacing-md;
+
+    @media (max-width: $bp-tablet) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .hero-cta {
     display: flex;
     gap: $spacing-sm;
+
+    @media (max-width: $bp-tablet) {
+        justify-content: center;
+    }
 }
 
 // Cards (Skills & Projects)
@@ -352,5 +465,5 @@
 .footer-bottom {
     text-align: center;
     font-size: 0.85rem;
-    color: darken($color-text-muted, 20%);
+    color: var(--text-muted-darker);
 }

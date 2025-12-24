@@ -8,6 +8,7 @@
         "name": "Omkarnath Dubey",
         "role": "Frontend Developer",
         "tagline": "Crafting responsive, high-performance, and visually stunning web experiences.",
+        "image": "assets/images/profile.png",
         "cta_primary": {
             "text": "View Projects",
             "link": "#projects"

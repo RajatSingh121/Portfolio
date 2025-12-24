@@ -21,7 +21,7 @@ $content = get_content();
 
 <!-- Hero Section -->
 <section id="hero" class="hero-section">
-    <div class="container">
+    <div class="container hero-container">
         <div class="hero-content fade-in-up">
             <span class="greeting">Hello, I'm</span>
             <h1 class="hero-name"><?php echo htmlspecialchars($content['hero']['name']); ?></h1>
@@ -31,6 +31,9 @@ $content = get_content();
                 <a href="<?php echo htmlspecialchars($content['hero']['cta_primary']['link']); ?>" class="btn btn-primary"><?php echo htmlspecialchars($content['hero']['cta_primary']['text']); ?></a>
                 <a href="<?php echo htmlspecialchars($content['hero']['cta_secondary']['link']); ?>" class="btn btn-secondary"><?php echo htmlspecialchars($content['hero']['cta_secondary']['text']); ?></a>
             </div>
+        </div>
+        <div class="hero-image fade-in-up">
+            <img src="<?php echo htmlspecialchars($content['hero']['image']); ?>" alt="<?php echo htmlspecialchars($content['hero']['name']); ?>">
         </div>
     </div>
 </section>
@@ -42,12 +45,12 @@ $content = get_content();
             <h2 class="section-title"><?php echo htmlspecialchars($content['about']['title']); ?></h2>
         </div>
         <div class="about-content fade-in-up">
-                <?php 
-                    $aboutContent = htmlspecialchars($content['about']['content']);
-                    // Simple Markdown parser for **bold**
-                    $aboutContent = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $aboutContent);
-                    echo nl2br($aboutContent);
-                ?></p>
+            <?php 
+                $aboutContent = htmlspecialchars($content['about']['content']);
+                // Simple Markdown parser for **bold**
+                $aboutContent = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $aboutContent);
+                echo nl2br($aboutContent);
+            ?>
         </div>
     </div>
 </section>

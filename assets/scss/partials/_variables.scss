@@ -1,14 +1,58 @@
 // _variables.scss
 
-// Colors - Corporate & Premium
-$color-bg: #0f1115;       // Very dark charcoal
-$color-bg-alt: #161b22;   // Slightly lighter for cards/sections
-$color-text: #e6edf3;     // Off-white for body text
-$color-text-muted: #8b949e;
-$color-primary: #58a6ff;  // Bright blue for actions
-$color-secondary: #238636;// Success/Secondary
-$color-accent: #7ee787;   // Green accent
-$color-border: #30363d;   // Subtle borders
+// Colors - Theme Colors (CSS Variables for Dynamic Switching)
+:root {
+    --bg-dark: #0d1117;
+    --bg-card-dark: #161b22;
+    --text-main-dark: #c9d1d9;
+    --text-muted-dark: #8b949e;
+    --text-main-dark: #c9d1d9;
+    --text-muted-dark: #8b949e;
+    --text-muted-darker-dark: #6e7681;
+    --border-dark: #30363d;
+
+    --bg-light: #ffffff;
+    --bg-card-light: #f6f8fa;
+    --text-main-light: #24292f;
+    --text-muted-light: #57606a;
+    --text-main-light: #24292f;
+    --text-muted-light: #57606a;
+    --text-muted-darker-light: #24292f;
+    --border-light: #d0d7de;
+
+    --primary: #58a6ff;
+    --primary-hover: #79c0ff;
+    --secondary: #8b949e;
+
+    // Default to Dark
+    --bg-color: var(--bg-dark);
+    --bg-card: var(--bg-card-dark);
+    --text-main: var(--text-main-dark);
+    --text-muted: var(--text-muted-dark);
+    --text-muted-darker: var(--text-muted-darker-dark);
+    --border-color: var(--border-dark);
+}
+
+[data-theme="light"] {
+    --bg-color: var(--bg-light);
+    --bg-card: var(--bg-card-light);
+    --text-main: var(--text-main-light);
+    --text-muted: var(--text-muted-light);
+    --border-color: var(--border-light);
+    --primary: #0969da; // Darker blue for light mode contrast
+    --primary-hover: #0550ae;
+    --text-muted-darker: var(--text-muted-darker-light);
+}
+
+// SCSS Variables mapped to CSS Vars
+$color-bg: var(--bg-color);
+$color-bg-alt: var(--bg-card);
+$color-text: var(--text-main);
+$color-text-muted: var(--text-muted);
+$color-primary: var(--primary);
+$color-secondary: var(--secondary);
+$color-accent: #7ee787; // Green accent (kept from original, not mapped to CSS var in provided edit)
+$color-border: var(--border-color);
 
 // Typography
 $font-primary: 'Inter', sans-serif;

@@ -19,6 +19,13 @@ $meta = $content['meta'];
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi,sa,es,fr,de,ja,zh-CN,ru,ar', autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
     <header class="site-header">
@@ -29,11 +36,35 @@ $meta = $content['meta'];
             
             <nav class="main-nav">
                 <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#contact" class="nav-link btn btn-primary">Contact</a></li>
+                    <li><a href="#contact" class="nav-link btn">Contact</a></li>
+                    
+                    <!-- Controls -->
+                    <li class="nav-control">
+                        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                            <span class="icon-sun">☀️</span>
+                            <span class="icon-moon">🌙</span>
+                        </button>
+                    </li>
+                    <li class="nav-control">
+                        <div id="google_translate_element" style="display:none;"></div>
+                        <select id="lang-select" class="lang-dropdown" onchange="triggerTranslate(this.value)">
+                            <option value="en">English 🇺🇸</option>
+                            <option value="hi">Hindi 🇮🇳</option>
+                            <option value="sa">Sanskrit 🕉️</option>
+                            <option value="es">Spanish 🇪🇸</option>
+                            <option value="fr">French 🇫🇷</option>
+                            <option value="de">German 🇩🇪</option>
+                            <option value="ja">Japanese 🇯🇵</option>
+                            <option value="zh-CN">Chinese 🇨🇳</option>
+                            <option value="ru">Russian 🇷🇺</option>
+                            <option value="ar">Arabic 🇸🇦</option>
+                        </select>
+                    </li>
                 </ul>
                 <button class="mobile-menu-toggle" aria-label="Toggle navigation">
                     <span class="bar"></span>
