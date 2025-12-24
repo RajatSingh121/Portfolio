@@ -36,12 +36,12 @@ $meta = $content['meta'];
             
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#contact" class="nav-link btn">Contact</a></li>
+                    <li><a href="index.php" class="nav-link">Home</a></li>
+                    <li><a href="about.php" class="nav-link">About</a></li>
+                    <li><a href="skills.php" class="nav-link">Skills</a></li>
+                    <li><a href="projects.php" class="nav-link">Projects</a></li>
+                    <li><a href="experience.php" class="nav-link">Experience</a></li>
+                    <li><a href="contact.php" class="nav-link btn">Contact</a></li>
                     
                     <!-- Controls -->
                     <li class="nav-control">

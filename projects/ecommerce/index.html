@@ -4,33 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxeShop | E-Commerce Demo</title>
+    <title>LuxeStore | Premium E-Commerce</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <style>
         :root {
-            --primary: #222;
-            --accent: #d4a373;
-            --bg: #f9f9f9;
+            --bg-body: #f8f9fa;
+            --bg-white: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666;
+            --accent: #000;
+            --danger: #e63946;
         }
 
         * {
             box-sizing: border-box;
-            font-family: 'Helvetica Neue', sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--primary);
+            background-color: var(--bg-body);
+            color: var(--text-main);
         }
 
         /* Nav */
         nav {
+            background: var(--bg-white);
+            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
-            background: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
@@ -39,23 +43,30 @@
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 1px;
+            font-weight: 800;
+            letter-spacing: -1px;
         }
 
-        .nav-links {
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-icons {
             display: flex;
             gap: 20px;
             align-items: center;
         }
 
-        .back-btn {
-            text-decoration: none;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .cart-btn {
+        .cart-icon {
             position: relative;
             cursor: pointer;
         }
@@ -64,35 +75,115 @@
             position: absolute;
             top: -8px;
             right: -8px;
-            background: var(--accent);
+            background: var(--danger);
             color: white;
             font-size: 0.7rem;
-            padding: 2px 6px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            opacity: 0;
+            transition: 0.3s;
         }
 
-        /* Hero */
+        .cart-badge.visible {
+            opacity: 1;
+        }
+
+        /* Hero Carousel */
         .hero {
-            background: #eaeaea;
-            padding: 60px 40px;
+            height: 500px;
+            background: #e0e0e0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 1s ease;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
             text-align: center;
-            margin-bottom: 40px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .hero h1 {
-            margin-bottom: 10px;
-            font-size: 2.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
 
-        .hero p {
-            color: #666;
+        .btn-hero {
+            padding: 12px 30px;
+            background: white;
+            color: black;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
 
-        /* Grid */
+        .btn-hero:hover {
+            background: #000;
+            color: white;
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        /* Products */
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px 60px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
 
         .grid {
@@ -101,135 +192,249 @@
             gap: 30px;
         }
 
-        .product {
+        .product-card {
             background: white;
-            padding: 20px;
             border-radius: 8px;
-            transition: transform 0.3s;
+            overflow: hidden;
+            transition: 0.3s;
+            position: relative;
         }
 
-        .product:hover {
+        .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .img-placeholder {
-            width: 100%;
-            height: 200px;
-            background-color: #eee;
-            margin-bottom: 15px;
+        .product-img {
+            height: 300px;
+            background: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #aaa;
+            position: relative;
         }
 
-        .p-title {
-            font-weight: bold;
-            margin-bottom: 5px;
+        .product-img img {
+            max-width: 80%;
+            max-height: 80%;
+            mix-blend-mode: multiply;
         }
 
-        .p-price {
-            color: var(--accent);
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .add-btn {
+        .action-overlay {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
             width: 100%;
-            padding: 10px;
-            background: var(--primary);
+            display: flex;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .product-card:hover .action-overlay {
+            bottom: 20px;
+        }
+
+        .btn-add {
+            background: black;
             color: white;
             border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
             cursor: pointer;
-            transition: 0.2s;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .add-btn:hover {
-            background: #444;
+        .product-info {
+            padding: 20px;
         }
 
-        /* Toast */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #333;
+        .product-cat {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* Exit Bar */
+        .exit-bar {
+            background: #000;
             color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            opacity: 0;
-            transition: 0.3s;
-            transform: translateY(10px);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
         }
 
-        .toast.show {
-            opacity: 1;
-            transform: translateY(0);
+        .exit-bar a {
+            color: #fff;
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
+    <div class="exit-bar">
+        Viewing Live Demo. <a href="../../projects.php">Return to Portfolio</a>
+    </div>
+
     <nav>
-        <div class="logo">LUXESHOP</div>
-        <div class="nav-links">
-            <a href="../../index.php" class="back-btn">← Portfolio</a>
-            <div class="cart-btn" onclick="alert('Cart functionality demo')">
-                🛒 <span class="cart-badge" id="count">0</span>
+        <div class="logo">LuxeStore.</div>
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link">New Arrivals</a></li>
+            <li><a href="#" class="nav-link">Men</a></li>
+            <li><a href="#" class="nav-link">Women</a></li>
+            <li><a href="#" class="nav-link">Accessories</a></li>
+        </ul>
+        <div class="nav-icons">
+            <span class="material-icons-round">search</span>
+            <span class="material-icons-round">person_outline</span>
+            <div class="cart-icon" onclick="toggleCart()">
+                <span class="material-icons-round">shopping_bag</span>
+                <div class="cart-badge" id="cart-badge">0</div>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>Summer Essentials</h1>
-        <p>Curated minimalist design for the modern era.</p>
-    </header>
-
-    <div class="container">
-        <div class="grid" id="grid">
-            <!-- JS Injection -->
+    <!-- Hero Carousel -->
+    <div class="hero">
+        <div class="slide active"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+            <div class="hero-content">
+                <h1>Summer Collection 2026</h1>
+                <button class="btn-hero">Shop Now</button>
+            </div>
+        </div>
+        <div class="slide"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+            <div class="hero-content">
+                <h1>Essential Minimalism</h1>
+                <button class="btn-hero">Discover</button>
+            </div>
+        </div>
+        <div class="dots">
+            <div class="dot active" onclick="setSlide(0)"></div>
+            <div class="dot" onclick="setSlide(1)"></div>
         </div>
     </div>
 
-    <div class="toast" id="toast">Added to cart!</div>
+    <!-- Products -->
+    <div class="container">
+        <div class="section-header">
+            <h2>Trending Now</h2>
+            <a href="#" style="color: black; font-weight: 600;">View All -></a>
+        </div>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="material-icons-round" style="font-size: 64px; color: #ccc;">checkroom</span>
+                    <div class="action-overlay">
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-cat">Men's Apparel</div>
+                    <div class="product-title">Classic Merino Tee</div>
+                    <div class="product-price">$45.00</div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="material-icons-round" style="font-size: 64px; color: #ccc;">watch</span>
+                    <div class="action-overlay">
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-cat">Accessories</div>
+                    <div class="product-title">Chronograph Black</div>
+                    <div class="product-price">$120.00</div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="material-icons-round" style="font-size: 64px; color: #ccc;">backpack</span>
+                    <div class="action-overlay">
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-cat">Bags</div>
+                    <div class="product-title">Urban Commuter Pack</div>
+                    <div class="product-price">$85.00</div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="material-icons-round" style="font-size: 64px; color: #ccc;">headphones</span>
+                    <div class="action-overlay">
+                        <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-cat">Electronics</div>
+                    <div class="product-title">Noise Cancelling Pro</div>
+                    <div class="product-price">$299.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        const products = [
-            { id: 1, name: "Minimalist Watch", price: 129.00 },
-            { id: 2, name: "Leather Tote", price: 249.50 },
-            { id: 3, name: "Wireless Buds", price: 89.99 },
-            { id: 4, name: "Desk Lamp", price: 45.00 },
-            { id: 5, name: "Sneaker Pro", price: 110.00 },
-            { id: 6, name: "Travel Backpack", price: 75.00 },
-        ];
+        // Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
 
+        function showSlide(n) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            slides[n].classList.add('active');
+            dots[n].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function setSlide(n) {
+            currentSlide = n;
+            showSlide(n);
+        }
+
+        setInterval(nextSlide, 5000);
+
+        // Cart Logic
         let cartCount = 0;
+        const badge = document.getElementById('cart-badge');
 
-        function render() {
-            const grid = document.getElementById('grid');
-            grid.innerHTML = products.map(p => `
-                <div class="product">
-                    <div class="img-placeholder">Product Image</div>
-                    <div class="p-title">${p.name}</div>
-                    <span class="p-price">$${p.price.toFixed(2)}</span>
-                    <button class="add-btn" onclick="addToCart(${p.id})">Add to Cart</button>
-                </div>
-            `).join('');
-        }
-
-        function addToCart(id) {
+        function addToCart() {
             cartCount++;
-            document.getElementById('count').innerText = cartCount;
+            badge.innerText = cartCount;
+            badge.classList.add('visible');
 
-            // Show toast
-            const toast = document.getElementById('toast');
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2000);
+            // Simple animation
+            badge.style.transform = 'scale(1.2)';
+            setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
         }
-
-        render();
     </script>
 </body>
 

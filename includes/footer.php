@@ -12,6 +12,14 @@ $contact = $content['contact'];
                     <h3><?php echo htmlspecialchars($content['hero']['name']); ?></h3>
                     <p class="role"><?php echo htmlspecialchars($content['hero']['role']); ?></p>
                 </div>
+                
+                <div class="footer-quick-links" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="about.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">About</a>
+                    <a href="skills.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Skills</a>
+                    <a href="projects.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Projects</a>
+                    <a href="contact.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Contact</a>
+                </div>
+
                 <div class="footer-links">
                     <a href="mailto:<?php echo htmlspecialchars($contact['email']); ?>" class="social-link">Email</a>
                     <a href="https://<?php echo htmlspecialchars($contact['linkedin']); ?>" target="_blank" class="social-link">LinkedIn</a>

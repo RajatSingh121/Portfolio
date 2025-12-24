@@ -64,6 +64,7 @@
         "title": "Featured Projects",
         "items": [
             {
+                "id": "gls-2026",
                 "title": "Global Leadership Summit 2026",
                 "description": "Frontend development for an international, high-traffic event website. Implemented responsive layouts, optimized page load performance, and ensured SEO-friendly structure.",
                 "tech_stack": [
@@ -76,6 +77,7 @@
                 "github_link": "#"
             },
             {
+                "id": "nextgen-vidhya",
                 "title": "NextGen Vidhya",
                 "description": "Live education platform. Implemented UI enhancements and integrated backend APIs.",
                 "tech_stack": [
@@ -86,6 +88,7 @@
                 "github_link": "#"
             },
             {
+                "id": "nextgen-techno",
                 "title": "NextGen Techno Website",
                 "description": "Corporate website development. Improved website responsiveness and visual consistency.",
                 "tech_stack": [
@@ -97,6 +100,7 @@
                 "github_link": "#"
             },
             {
+                "id": "mitra-fintech",
                 "title": "Mitra Fintech",
                 "description": "Developed and maintained frontend modules for a fintech platform. Collaborated with backend teams for seamless data integration.",
                 "tech_stack": [
@@ -107,6 +111,7 @@
                 "github_link": "#"
             },
             {
+                "id": "spark-women",
                 "title": "Spark Women (Android Sim)",
                 "description": "Interactive simulation of an Android safety app. Features SOS alerts, location tracking, and emergency contact management.",
                 "tech_stack": [
@@ -118,6 +123,7 @@
                 "github_link": "#"
             },
             {
+                "id": "spark-master",
                 "title": "Spark Master",
                 "description": "Static website platform focused on women empowerment content and community resources.",
                 "tech_stack": [
@@ -128,6 +134,7 @@
                 "github_link": "#"
             },
             {
+                "id": "dashboard",
                 "title": "Enterprise Dashboard UI",
                 "description": "A comprehensive analytics dashboard for large-scale data visualization, featuring real-time updates and customizable widgets.",
                 "tech_stack": [
@@ -139,6 +146,7 @@
                 "github_link": "#"
             },
             {
+                "id": "ecommerce",
                 "title": "E-Commerce Platform",
                 "description": "A headless e-commerce frontend built for performance and SEO, integrating with Shopify API.",
                 "tech_stack": [
@@ -150,6 +158,7 @@
                 "github_link": "#"
             },
             {
+                "id": "banking",
                 "title": "Corporate Banking Portal",
                 "description": "Secure and accessible banking interface designed for high-net-worth individual management.",
                 "tech_stack": [
