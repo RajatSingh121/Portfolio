@@ -148,7 +148,7 @@
             {
                 "id": "ecommerce",
                 "title": "E-Commerce Platform",
-                "description": "A headless e-commerce frontend built for performance and SEO, integrating with Shopify API.",
+                "description": "A headless e-commerce frontend built for performance and SEO, integrating with Shopify API. Features Indian currency localization.",
                 "tech_stack": [
                     "Next.js",
                     "Tailwind CSS",

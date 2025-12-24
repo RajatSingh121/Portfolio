@@ -63,9 +63,9 @@ require_once 'includes/header.php';
             </div>
             
             <div class="project-visuals fade-in-up">
-                <!-- Placeholder for dynamic screenshots or just a generic project abstract visual -->
-                <div class="visual-placeholder">
-                    <span>Active Project Preview</span>
+                <!-- Dynamic or Default Visual -->
+                <div class="visual-placeholder" style="background-image: url('assets/images/demos/tech_header.png'); background-size: cover; border: none;">
+                    <!-- <span>Active Project Preview</span> -->
                 </div>
             </div>
         </div>
