@@ -1,13 +1,13 @@
 {
     "meta": {
         "title": "Omkarnath Dubey | Frontend Developer",
-        "description": "Portfolio of Omkarnath Dubey, a Frontend Developer specializing in performance, UI/UX, and scalability.",
-        "keywords": "Frontend Developer, React, Next.js, Corporate Portfolio"
+        "description": "Portfolio of Omkarnath Dubey, a Frontend Developer specializing in responsive design, UI/UX, and performance optimization.",
+        "keywords": "Frontend Developer, React, HTML, CSS, JavaScript, Portfolio"
     },
     "hero": {
         "name": "Omkarnath Dubey",
         "role": "Frontend Developer",
-        "tagline": "Building scalable, high-performance, and elegant web solutions for the enterprise.",
+        "tagline": "Crafting responsive, high-performance, and visually stunning web experiences.",
         "cta_primary": {
             "text": "View Projects",
             "link": "#projects"
@@ -19,7 +19,7 @@
     },
     "about": {
         "title": "About Me",
-        "content": "I am a results-driven Frontend Developer with a passion for crafting pixel-perfect, accessible, and performant web applications. With a strong foundation in modern JavaScript frameworks and a keen eye for design, I transform complex requirements into seamless digital experiences. My approach blends technical expertise with a business-focused mindset to deliver software that scales."
+        "content": "I am a dedicated Frontend Developer with hands-on experience in building modern, user-centric web applications. With a background in Information Technology and a passion for clean code, I specialize in transforming designs into functional, responsive websites using the latest web technologies."
     },
     "skills": {
         "title": "Technical Expertise",
@@ -30,16 +30,15 @@
                     "HTML5",
                     "CSS3",
                     "JavaScript (ES6+)",
-                    "TypeScript"
+                    "Java"
                 ]
             },
             {
                 "name": "Frameworks & Libraries",
                 "items": [
                     "React",
-                    "Next.js",
-                    "Tailwind CSS",
-                    "Bootstrap"
+                    "Bootstrap",
+                    "Tailwind CSS"
                 ]
             },
             {
@@ -48,7 +47,7 @@
                     "Git & GitHub",
                     "VS Code",
                     "Figma",
-                    "Webpack/Vite"
+                    "AWS (Basic)"
                 ]
             },
             {
@@ -64,36 +63,66 @@
         "title": "Featured Projects",
         "items": [
             {
-                "title": "Enterprise Dashboard UI",
-                "description": "A comprehensive analytics dashboard for large-scale data visualization, featuring real-time updates and customizable widgets.",
+                "title": "Global Leadership Summit 2026",
+                "description": "Frontend development for an international, high-traffic event website. Implemented responsive layouts, optimized page load performance, and ensured SEO-friendly structure.",
+                "tech_stack": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Responsive Design"
+                ],
+                "demo_link": "https://globalleadershipsummit2026.com/",
+                "github_link": "#"
+            },
+            {
+                "title": "NextGen Vidhya",
+                "description": "Live education platform. Implemented UI enhancements and integrated backend APIs.",
+                "tech_stack": [
+                    "Frontend Dev",
+                    "API Integration"
+                ],
+                "demo_link": "https://nextgenvidhya.co.in/",
+                "github_link": "#"
+            },
+            {
+                "title": "NextGen Techno Website",
+                "description": "Corporate website development. Improved website responsiveness and visual consistency.",
+                "tech_stack": [
+                    "HTML",
+                    "CSS",
+                    "Bootstrap"
+                ],
+                "demo_link": "https://nextgentechno.in/",
+                "github_link": "#"
+            },
+            {
+                "title": "Mitra Fintech",
+                "description": "Developed and maintained frontend modules for a fintech platform. Collaborated with backend teams for seamless data integration.",
                 "tech_stack": [
                     "React",
-                    "D3.js",
-                    "Material UI"
+                    "UI Modules"
                 ],
-                "demo_link": "projects/dashboard/index.html",
+                "demo_link": "https://mitrafintech.com/",
                 "github_link": "#"
             },
             {
-                "title": "E-Commerce Platform",
-                "description": "A headless e-commerce frontend built for performance and SEO, integrating with Shopify API.",
+                "title": "Spark Women (Android App)",
+                "description": "Final-year academic project focused on women safety. Contributed to UI implementation and application logic using Java.",
                 "tech_stack": [
-                    "Next.js",
-                    "Tailwind CSS",
-                    "Stripe API"
+                    "Java",
+                    "Android XML"
                 ],
-                "demo_link": "projects/ecommerce/index.html",
+                "demo_link": "#",
                 "github_link": "#"
             },
             {
-                "title": "Corporate Banking Portal",
-                "description": "Secure and accessible banking interface designed for high-net-worth individual management.",
+                "title": "Spark Master",
+                "description": "Static website for women empowerment. Designed and developed using HTML and CSS.",
                 "tech_stack": [
-                    "Vue.js",
-                    "SCSS",
-                    "Jest"
+                    "HTML",
+                    "CSS"
                 ],
-                "demo_link": "projects/banking/index.html",
+                "demo_link": "#",
                 "github_link": "#"
             }
         ]
@@ -102,30 +131,53 @@
         "title": "Professional Experience",
         "items": [
             {
-                "role": "Senior Frontend Developer",
-                "company": "TechCorp Solutions",
-                "duration": "2023 - Present",
+                "role": "Frontend Developer / Intern",
+                "company": "NextGen Techno Ventures Pvt. Ltd.",
+                "duration": "June 2024 – November 2025",
+                "location": "Mumbai, India",
                 "details": [
-                    "Led the migration of legacy monolith frontend to a modern micro-frontend architecture.",
-                    "Improved site performance scores by 40% through code splitting and asset optimization."
-                ]
-            },
-            {
-                "role": "Frontend Engineer",
-                "company": "Innovate Digital",
-                "duration": "2021 - 2023",
-                "details": [
-                    "Collaborated with UX designers to implement a new design system used across 5+ products.",
-                    "Mentored junior developers and established code quality standards."
+                    "Contributed to frontend development for multiple live projects.",
+                    "Implemented responsive layouts and optimized user interfaces.",
+                    "Collaborated with the team to ensure consistent UI/UX across modern browsers."
                 ]
             }
         ]
     },
+    "education": {
+        "title": "Education",
+        "items": [
+            {
+                "degree": "Bachelor of Science in Information Technology (B.Sc. IT)",
+                "institution": "Royal College of Art, Science & Commerce, Dombivli (E)",
+                "duration": "April 2017 – May 2023"
+            }
+        ]
+    },
+    "certifications": {
+        "title": "Certifications & Courses",
+        "items": [
+            "100 Days of Code – Pro Python Bootcamp (Udemy)",
+            "Frontend Development – HTML (Great Learning)",
+            "Java Programming (Great Learning)",
+            "AWS for Beginners (Great Learning)",
+            "Artificial Intelligence Fundamentals (Great Learning)"
+        ]
+    },
+    "awards": {
+        "title": "Awards & Achievements",
+        "items": [
+            "Meena Ratna Student Award (2012) – State Government (Cleanliness Initiative)",
+            "Science Exhibition Award – District Level",
+            "1st International Multidisciplinary Conference (2023) – Research Participation"
+        ]
+    },
     "contact": {
         "title": "Get In Touch",
-        "subtitle": "Available for freelance opportunities and full-time roles.",
-        "email": "omkarnath@example.com",
-        "linkedin": "linkedin.com/in/omkarnath",
-        "github": "github.com/omkarnath"
+        "subtitle": "Open for functionality, collaboration and new opportunities.",
+        "location": "Mirzapur, Uttar Pradesh – 231303, India",
+        "phone": "+91 9892018171",
+        "email": "omkarnathdubey127@gmail.com",
+        "linkedin": "www.linkedin.com/in/ohom-dubey-23055917b",
+        "github": "github.com/Ohom1"
     }
 }

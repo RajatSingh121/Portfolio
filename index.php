@@ -121,12 +121,70 @@ $content = get_content();
     </div>
 </section>
 
+<!-- Education Section -->
+<section id="education" class="section education-section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title"><?php echo htmlspecialchars($content['education']['title']); ?></h2>
+        </div>
+        <div class="timeline">
+            <?php foreach ($content['education']['items'] as $edu): ?>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-content">
+                        <h3 class="job-role"><?php echo htmlspecialchars($edu['degree']); ?></h3>
+                        <h4 class="company-name"><?php echo htmlspecialchars($edu['institution']); ?></h4>
+                        <span class="job-duration"><?php echo htmlspecialchars($edu['duration']); ?></span>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="section cert-section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title"><?php echo htmlspecialchars($content['certifications']['title']); ?></h2>
+        </div>
+        <div class="skills-grid">
+            <?php foreach ($content['certifications']['items'] as $cert): ?>
+                <div class="skill-category fade-in-up" style="text-align: center; padding: 1.5rem;">
+                    <span style="font-weight: 500;"><?php echo htmlspecialchars($cert); ?></span>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- Awards Section -->
+<section id="awards" class="section awards-section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title"><?php echo htmlspecialchars($content['awards']['title']); ?></h2>
+        </div>
+        <ul class="job-details" style="max-width: 800px; margin: 0 auto; list-style: none;">
+            <?php foreach ($content['awards']['items'] as $award): ?>
+                <li class="fade-in-up" style="background: #161b22; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #30363d;">
+                    🏆 <?php echo htmlspecialchars($award); ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="section contact-section">
     <div class="container">
         <div class="section-header fade-in">
             <h2 class="section-title"><?php echo htmlspecialchars($content['contact']['title']); ?></h2>
             <p class="section-subtitle"><?php echo htmlspecialchars($content['contact']['subtitle']); ?></p>
+        </div>
+
+        <div class="contact-methods" style="text-align: center; margin-bottom: 3rem;">
+            <p>📍 <?php echo htmlspecialchars($content['contact']['location']); ?></p>
+            <p>📞 <a href="tel:<?php echo htmlspecialchars($content['contact']['phone']); ?>"><?php echo htmlspecialchars($content['contact']['phone']); ?></a></p>
+            <p>✉️ <a href="mailto:<?php echo htmlspecialchars($content['contact']['email']); ?>"><?php echo htmlspecialchars($content['contact']['email']); ?></a></p>
         </div>
         
         <div class="contact-wrapper fade-in-up">
